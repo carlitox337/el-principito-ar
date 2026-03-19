@@ -43,10 +43,10 @@ html, body {
 .screen { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; opacity:0; pointer-events:none; transition:opacity .6s ease; overflow-y:auto; overflow-x:hidden; -webkit-overflow-scrolling:touch; }
 .screen.active { opacity:1; pointer-events:all; }
 
-.stars-bg { position:fixed; inset:0; pointer-events:none; z-index:0; }
+.stars-bg { position:absolute; inset:0; pointer-events:none; z-index:0; overflow:hidden; }
 .star { position:absolute; font-size:12px; color:var(–star-yellow); animation:twinkle 3s ease-in-out infinite; line-height:1; text-shadow:0 0 6px rgba(242,201,76,.5); }
 
-.watercolor-bg { position:fixed; inset:0; pointer-events:none; z-index:0; background:radial-gradient(ellipse at 20% 80%,rgba(197,165,90,.08) 0%,transparent 50%),radial-gradient(ellipse at 80% 20%,rgba(27,43,91,.05) 0%,transparent 50%),radial-gradient(ellipse at 50% 50%,rgba(232,223,208,.3) 0%,transparent 70%),linear-gradient(180deg,var(–cream) 0%,var(–cream-dark) 100%); }
+.watercolor-bg { position:absolute; inset:0; pointer-events:none; z-index:0; background:radial-gradient(ellipse at 20% 80%,rgba(197,165,90,.08) 0%,transparent 50%),radial-gradient(ellipse at 80% 20%,rgba(27,43,91,.05) 0%,transparent 50%),radial-gradient(ellipse at 50% 50%,rgba(232,223,208,.3) 0%,transparent 70%),linear-gradient(180deg,var(–cream) 0%,var(–cream-dark) 100%); }
 
 /* SPLASH */
 #splash { background:linear-gradient(180deg,#1a1e36 0%,#0d1026 100%); justify-content:center; overflow:hidden; }
@@ -120,7 +120,7 @@ html, body {
 
 /* AR CARD */
 #arcard { background:linear-gradient(180deg,#0d1026 0%,#1a1e36 100%); justify-content:center; padding:24px; }
-.ar-card { position:relative; z-index:1; width:100%; max-width:340px; background:var(–white); border-radius:20px; overflow:hidden; box-shadow:0 12px 40px rgba(0,0,0,.4); animation:fadeInScale .6s ease-out; }
+.ar-card { position:relative; z-index:2; width:100%; max-width:340px; background:var(–white); border-radius:20px; overflow:hidden; box-shadow:0 12px 40px rgba(0,0,0,.4); animation:fadeInScale .6s ease-out; }
 .ar-card-visual { height:200px; background:linear-gradient(135deg,var(–cream) 0%,var(–cream-dark) 100%); display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; border-bottom:3px solid var(–gold); }
 .ar-card-visual img { max-height:180px; max-width:90%; object-fit:contain; animation:float 4s ease-in-out infinite; filter:drop-shadow(0 8px 16px rgba(0,0,0,.1)); }
 .ar-card-badge { position:absolute; top:12px; right:12px; background:var(–gold); color:var(–white); font-size:11px; font-weight:600; padding:4px 12px; border-radius:12px; font-family:‘Cormorant Garamond’,serif; letter-spacing:.5px; }
